@@ -1,2 +1,47 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+import math
+
+print("Calculator")
+print("+, -, *, /, %, sin, cos, tan")
+print("Type exit to close")
+
+while True:
+
+    operation = input("Enter operation: ")
+
+    if operation == "exit":
+        break
+
+    if operation in ["+", "-", "*", "/", "%"]:
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+
+        if operation == "+":
+            print("Answer:", num1 + num2)
+
+        elif operation == "-":
+            print("Answer:", num1 - num2)
+
+        elif operation == "*":
+            print("Answer:", num1 * num2)
+
+        elif operation == "/":
+            print("Answer:", num1 / num2)
+
+        elif operation == "%":
+            print("Answer:", num1 % num2)
+
+    elif operation in ["sin", "cos", "tan"]:
+        angle = float(input("Enter angle: "))
+        angle = math.radians(angle)
+
+        if operation == "sin":
+            print("Answer:", math.sin(angle))
+
+        elif operation == "cos":
+            print("Answer:", math.cos(angle))
+
+        elif operation == "tan":
+            print("Answer:", math.tan(angle))
+
+    else:
+        print("Invalid operation")
